@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>متجر ستار — متجر إلكتروني</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/store.css">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">🛍️ متجر ستار</div>
+  <ul class="nav-links">
+    <li><a href="#home">الرئيسية</a></li>
+    <li><a href="#products">المنتجات</a></li>
+    <li><a href="#categories">التصنيفات</a></li>
+    <li><a href="#about">من نحن</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="icon-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+    <button class="btn btn-primary">تسجيل دخول</button>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content fade-up">
+    <div class="badge">🎉 شحن مجاني لجميع الطلبات فوق 200 ر.س</div>
+    <h1>اكتشف <span>أفضل المنتجات</span><br>بأسعار لا تُقاوم</h1>
+    <p>تسوق من آلاف المنتجات عالية الجودة مع ضمان الأصالة وسهولة الإرجاع.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="#products" class="btn btn-primary">تسوق الآن 🛍️</a>
+      <a href="#categories" class="btn btn-outline">تصفح التصنيفات</a>
+    </div>
+  </div>
+</section>
+
+<div class="promo-bar">
+  <span>⚡ عرض اليوم: خصم 30% على جميع الإلكترونيات</span>
+  <span>🚚 شحن مجاني للطلبات فوق 200 ر.س</span>
+  <span>↩️ إرجاع مجاني خلال 30 يوم</span>
+</div>
+
+<section id="categories">
+  <div class="section-title"><h2>تصفح <span>التصنيفات</span></h2></div>
+  <div class="cat-grid" id="catGrid"></div>
+</section>
+
+<section id="products" style="background:var(--surface)">
+  <div class="section-title"><h2>أبرز <span>المنتجات</span></h2><p>اكتشف أكثر المنتجات مبيعاً</p></div>
+  <div class="filter-bar" id="filterBar"></div>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<section class="why-us">
+  <div class="section-title"><h2>لماذا <span>متجر ستار؟</span></h2></div>
+  <div class="grid-4">
+    <div class="card"><span class="icon">🚚</span><h3>شحن سريع</h3><p>توصيل في 24–48 ساعة لجميع أنحاء المملكة</p></div>
+    <div class="card"><span class="icon">🔒</span><h3>دفع آمن</h3><p>جميع المعاملات مشفرة وآمنة 100%</p></div>
+    <div class="card"><span class="icon">↩️</span><h3>إرجاع مجاني</h3><p>غير راضٍ؟ أعد المنتج خلال 30 يوماً</p></div>
+    <div class="card"><span class="icon">💬</span><h3>دعم 24/7</h3><p>فريق دعم متاح على مدار الساعة</p></div>
+  </div>
+</section>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛒 سلة التسوق</h3>
+    <button onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"><p class="empty-cart">سلتك فارغة</p></div>
+  <div class="cart-footer">
+    <div class="cart-total">الإجمالي: <span id="cartTotal">0 ر.س</span></div>
+    <button class="btn btn-primary" style="width:100%" onclick="checkout()">إتمام الشراء →</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 متجر ستار · جميع الحقوق محفوظة · صُنع بـ ⚡ Trend AI Builder</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/store.js"></script>
+</body>
+</html>
